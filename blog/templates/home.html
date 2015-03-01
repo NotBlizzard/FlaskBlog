@@ -1,2 +1,7 @@
 Hello World
-<a href='/register'>Register</a>
+{% if post %}
+<a href='/logout'>Logout</a>
+<a href='/new'>New Post</a>
+{% else %}
+<a href='/blog'>Blog</a>
+{% endif %}

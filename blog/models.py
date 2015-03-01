@@ -11,7 +11,6 @@ class Post(db.Document):
     'ordering': ['-pub_date']
   }
 
-class User(db.Document):
+class Admin(db.Document):
   username = db.StringField(max_length=100)
-  password = db.StringField(max_length=100)
-  admin = db.BooleanField()
+  password = db.StringField(max_length=200)
