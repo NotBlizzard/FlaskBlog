@@ -60,8 +60,6 @@ def login():
     password = request.form['password']
 
     u = Admin.objects.get(username=username)
-    print "pass is %s" % (u.password)
-    print "hash is %s" % (hashlib.sha512(password).hexdigest())
     if u.password == hashlib.sha512(password).hexdigest():
       session['logged_in'] = True
       flash("You successfully logged in.")
